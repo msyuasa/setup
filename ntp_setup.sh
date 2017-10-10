@@ -16,6 +16,6 @@ sed -i -e "s/server 3.cz.pool.ntp.org iburst/#server 3.cz.pool.ntp.org iburst/" 
 
 # 固定IPの設定
 # /etc/network/interfacesの書き換え
-cp interfaces /etc/network/intefaces
+cp /home/pi/setup/interfaces /etc/network/intefaces
 sudo /etc/init.d/networking restart
 
