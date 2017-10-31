@@ -53,9 +53,10 @@ while True:
       st = (int(n.strftime('%s')) / 60) * 60
       now = n.isoformat()
       hostname = socket.gethostname()
+      did = "ttySYSTEM0"
       msg_ori = {
          "id": hostname + "/" + did,
-         "device": "ttySYSTEM0",
+         "device": did,
          "hostname": hostname,
          "timeserial": st,
          "timestamp": now,
