@@ -70,11 +70,12 @@ while True:
          if mq_result[0] is mqtt.MQTT_ERR_SUCCESS:
             print('send succes:')
             count += 1
-         else:
-            #mq.publish(topic, msg, 1)
-            mq_result = mq.publish(topic, msg, 1)
-            if mq_result:
+      else:
+         #mq.publish(topic, msg, 1)
+         mq_result = mq.publish(topic, msg, 1)
+         if mq_result:
                 print('send succes:')
                 count += 1
+      time.sleep(5)
    if isinstance(mq, mqtt.Client):
       mq.reconnect()
