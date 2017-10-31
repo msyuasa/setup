@@ -20,9 +20,9 @@ opt.add_argument('-t', '--tenantid', help='`tenant id',   default='test')
 args = opt.parse_args()
 
 host = args.endpoint
-rootCA = './pki/root-CA.crt'
-cert = './pki/cert.pem'
-key = './pki/private-key.pem'
+rootCA = '/home/aws/app/pki/root-CA.crt'
+cert = '/home/aws/app/pki/cert.pem'
+key = '/home/aws/app/pki/private-key.pem'
 
 host_type = "aws"
 mq = AWSIoTMQTTClient("basicPubSub")
