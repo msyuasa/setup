@@ -43,7 +43,8 @@ while True:
    msg = json.dumps(msg_ori)
    print(topic + ':' + msg + "\n")
    conn.rpush('sensor/send', msg)
-   print("success push:", count)
    count += 1
+   print("success push:", count)
+   print(conn.llen(key))
    time.sleep(5)
 
