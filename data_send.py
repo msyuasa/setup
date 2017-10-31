@@ -49,7 +49,6 @@ count = 0
 while True:
    while true:
       topic = args.id + '/' + args.tenantid + '/sensor'
-      msg_ori = 
       n = datetime.now()
       st = (int(n.strftime('%s')) / 60) * 60
       now = n.isoformat()
