@@ -62,7 +62,7 @@ while True:
          "timestamp": now,
          "value": 1,
       }
-      msg = json.dumps(msg)
+      msg = json.dumps(msg_ori)
       print(host_type + ':' + topic + ':' + msg + "\n");
       if isinstance(mq, mqtt.Client):
          #mq.publish(topic, msg, 1)
