@@ -44,7 +44,7 @@ while True:
    print(topic + ':' + msg + "\n")
    conn.rpush('sensor/send', msg)
    count += 1
-   print("success push:", count)
-   print(conn.llen(key))
+   print("success push: " + count)
+   print("redis data number: " + conn.llen(key))
    time.sleep(5)
 
