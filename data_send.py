@@ -47,7 +47,7 @@ key  = 'sensor/send'
 
 count = 0
 while True:
-   while true:
+   while True:
       topic = args.id + '/' + args.tenantid + '/sensor'
       n = datetime.now()
       st = (int(n.strftime('%s')) / 60) * 60
