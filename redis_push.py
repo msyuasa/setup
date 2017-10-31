@@ -19,6 +19,8 @@ opt.add_argument('-t', '--tenantid', help='`tenant id',   default='test')
 #opt.add_argument('-u', '--usb',    help='USB Device',  default='/dev/ttyACM0')
 args = opt.parse_args()
 
+
+
 conn = redis.StrictRedis(host='localhost', port=6379)
 key  = 'sensor/send'
 
@@ -39,7 +41,7 @@ while True:
       "value": 1,
    }
    msg = json.dumps(msg_ori)
-   print(host_type + ':' + topic + ':' + msg + "\n")
+   print(topic + ':' + msg + "\n")
    conn.rpush('sensor/send', msg)
    print("success push:", count)
    count += 1
